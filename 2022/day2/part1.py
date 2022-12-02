@@ -30,9 +30,13 @@ def main():
 
     lut = list() # This will be a list of lists, where list[X] is a possible key 
                  # and list[X][Y] is the function/score to be used for that key
-    # A, X = Rock
-    # B, Y = Paper
-    # C, Z = Scissors
+    # A = Rock
+    # B = Paper
+    # C = Scissors
+
+    # X = Lose
+    # Y = Tie
+    # Z = Win
     
     lut.append([['A', 'X'], Tie])
     lut.append([['B', 'Y'], Tie])
