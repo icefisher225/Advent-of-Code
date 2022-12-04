@@ -18,23 +18,11 @@ def match(one, two, three):
                 if c1 == c2 == c3:
                     return c1
 
-    raise Exception("No match found")
+    raise Exception("No match found, tried to match {one}, {two} and {three}")
 
 def main():
     with open("data.txt", "r") as f:
-        data = f.read().splitlines()
-    
-    split_data = list()
-
-    for i in range(len(data)):
-        d_len = len(data[i])
-        split_data.append(list())
-        split_data[i].append(data[i][0:d_len//2])
-        split_data[i].append(data[i][d_len//2:d_len])
-        if len(split_data[i][0]) != len(split_data[i][1]):
-            raise Exception("Data not split correctly")
-        if split_data[i][0]+split_data[i][1] != data[i]:
-            raise Exception("Data not split correctly")
+        split_data = f.read().splitlines()
 
     total = 0
 
